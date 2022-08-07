@@ -1,0 +1,65 @@
+<div class="grid grid-cols-auto gap-4">
+
+	<!-- Slide show / carousel -->
+	<section [id]="'home-header-carousel'">
+		<app-slide-show [imageResources]="imageResources" [timeInterval]="4500"></app-slide-show>
+	</section>
+
+	<!-- Our solution -->
+	<section class="container mx-auto grid grid-cols-auto gap-4 justify-items-center" [id]="'home-our-solution'">
+		<span class="text-2xl font-medium">{{ 'Solusi dari kami' | titlecase }}</span>
+
+		<div class="grid grid-cols-3 gap-4 justify-items-center">
+
+			<div class="grid justify-items-center">
+				<i class="material-icons text-9xl">library_add</i>
+				<span class="text-xl">{{ 'Business service' | titlecase }}</span>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+
+			<div class="grid justify-items-center">
+				<i class="material-icons text-9xl text-center">view_timeline</i>
+				<span class="text-xl text-center">{{ 'Business service' | titlecase }}</span>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+
+			<div class="grid justify-items-center">
+				<i class="material-icons text-9xl text-center">data_thresholding</i>
+				<span class="text-xl text-center">{{ 'Business service' | titlecase }}</span>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+
+			<div class="grid justify-items-center">
+				<i class="material-icons text-9xl text-center">add_photo_alternate</i>
+				<span class="text-xl text-center">{{ 'Business service' | titlecase }}</span>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+
+			<div class="grid justify-items-center">
+				<i class="material-icons text-9xl text-center">event_available</i>
+				<span class="text-xl text-center">{{ 'Business service' | titlecase }}</span>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+
+			<div class="grid justify-items-center">
+				<i class="material-icons text-9xl text-center">rate_review</i>
+				<span class="text-xl text-center">{{ 'Business service' | titlecase }}</span>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Price list -->
+	<section class="container mx-auto grid grid-cols-auto gap-4 justify-items-center" [id]="'home-product-price-list'">
+		<span class="text-2xl font-medium">{{ 'Daftar harga produk' | titlecase }}</span>
+
+		<app-price-list [priceListResources]="priceListResources"></app-price-list>
+	</section>
+
+	<!-- Send message form -->
+	<section class="container mx-auto grid grid-cols-auto gap-4 justify-items-center" [id]="'home-send-message-form'">
+		<app-send-message-form></app-send-message-form>
+	</section>
+
+</div>

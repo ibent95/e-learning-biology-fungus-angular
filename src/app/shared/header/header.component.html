@@ -1,0 +1,22 @@
+<header>
+	<mat-toolbar color="primary">
+		<!--<button aria-label="App Menu">
+			<mat-icon>menu</mat-icon>
+		</button>-->
+
+		<span>{{ 'Sistem Pencernaan' }}</span>
+		<span class="spacer"></span>
+
+		<button mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Home page">
+			{{ 'Beranda' }}
+		</button>
+
+		<button mat-button routerLink="/tentang" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="About page">
+			{{ 'Tentang' }}
+		</button>
+
+		<button mat-button routerLink="/kontak" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Contacts page">
+			{{ 'Kontak' }}
+		</button>
+	</mat-toolbar>
+</header>
