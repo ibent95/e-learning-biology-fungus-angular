@@ -1,0 +1,49 @@
+<div>
+
+	<ng-container *ngIf="!(priceListResources && priceListResources.length)">
+		<p class="text-center">{{ 'Belum ada data ditampilkan.' }}</p>
+	</ng-container>
+
+	<ng-container *ngIf="(priceListResources && priceListResources.length)">
+		<div [ngClass]="['grid', 'grid-cols-' + priceListResources.length, 'gap-4', 'price-list-resources-container']" [id]="'price-list-resources-container'">
+
+			<ng-container *ngFor="let priceList of priceListResources; let listIndex = index;">
+
+				<div class=" price-list-container" [id]="'price-list-container'">
+
+					<mat-card>
+
+						<mat-card-content class="grid justify-items-center">
+							<ng-container *ngIf="(priceList.title)">
+								<h3 class="justify-self-center">{{ priceList.title }}</h3>
+							</ng-container>
+
+							<ng-container *ngIf="(priceList.subtitle)">
+								<p class="justify-self-center">{{ priceList.subtitle }}</p>
+							</ng-container>
+
+							<table class="table-fixed">
+								<thead>
+									<tr><th [attr.colspan]="2">{{ priceList.price | currency }}</th></tr>
+								</thead>
+								<tbody>
+									<ng-container *ngFor="let item of priceList.items; let itemIndex = index;">
+										<tr>
+											<td>{{ item.checklist }}</td>
+											<td>{{ item.description }}</td>
+										</tr>
+									</ng-container>
+								</tbody>
+							</table>
+						</mat-card-content>
+
+					</mat-card>
+
+				</div>
+
+			</ng-container>
+
+		</div>
+	</ng-container>
+
+</div>

@@ -1,0 +1,35 @@
+<section class="container mx-auto mt-6">
+
+	<mat-card>
+		<ng-container *ngIf="(title)">
+			<mat-card-title>{{ title }}</mat-card-title>
+		</ng-container>
+
+		<ng-container *ngIf="(subTitle)">
+			<mat-card-subtitle class="pt-2">{{ subTitle }}</mat-card-subtitle>
+		</ng-container>
+
+		<ng-container *ngIf="(title || subTitle)">
+			<mat-divider></mat-divider>
+		</ng-container>
+
+		<mat-card-content class="mt-6 pt-3 pb-1">
+
+			<app-under-construction-page></app-under-construction-page>
+
+			<!--<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim ac orci sit amet fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sem libero, laoreet eu tempus vel, gravida quis ante. Vivamus ultricies at velit nec pharetra. Vestibulum sed velit vestibulum, fringilla justo eget, pellentesque ligula. Nullam nec arcu tortor. Pellentesque congue congue urna vel efficitur. Fusce eu cursus mauris, non ultrices nunc. Vestibulum erat justo, ultricies sed viverra ut, placerat eget augue. Integer nibh justo, ultricies vel augue eget, iaculis hendrerit arcu. Quisque in nibh porttitor, imperdiet sapien non, consectetur ante. Duis varius odio elit, at gravida diam finibus vel. Nulla pretium lectus neque, vitae dictum nulla sagittis vel.
+			</p>
+
+			<p>
+				Quisque magna velit, posuere eget ante et, commodo auctor velit. In hac habitasse platea dictumst. Nam a egestas felis. Quisque blandit, lectus et euismod malesuada, magna purus commodo ex, in congue erat elit at orci. Donec mollis maximus leo, non molestie neque tincidunt ac. Phasellus vehicula tortor in elementum ultricies. Maecenas et scelerisque arcu. Quisque semper sollicitudin libero et ultrices. Morbi iaculis eros consectetur tempor vulputate. Nam varius auctor eleifend.
+			</p>-->
+
+		</mat-card-content>
+
+		<mat-card-footer>
+			<mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+		</mat-card-footer>
+	</mat-card>
+
+</section>

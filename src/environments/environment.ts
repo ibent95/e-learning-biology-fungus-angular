@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  app_name: 'e-learning-digestive-system-angular',
+  app_title: 'E-Learning Digestive System',
 };
 
 /*
