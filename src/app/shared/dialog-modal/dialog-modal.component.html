@@ -1,0 +1,23 @@
+<div>
+
+	<ng-container [ngSwitch]="type">
+
+		<ng-container *ngSwitchCase="{{ DialogModalType.INFO }}">
+			<app-info-dialog [title]="title" [message]="message" (close)="onChildDialogClose($event)"></app-info-dialog>
+		</ng-container>
+
+		<ng-container *ngSwitchCase="{{ DialogModalType.CONFIRM }}">
+			<app-confirm-dialog [title]="title" [message]="message" (close)="onChildDialogClose($event)"></app-confirm-dialog>
+		</ng-container>
+
+		<ng-container *ngSwitchCase="{{ DialogModalType.WARNING }}">
+			<app-warning-dialog [title]="title" [message]="message" (close)="onChildDialogClose($event)"></app-warning-dialog>
+		</ng-container>
+
+		<ng-container *ngSwitchCase="{{ DialogModalType.ALERT }}">
+			<app-alert-dialog [title]="title" [message]="message" (close)="onChildDialogClose($event)"></app-alert-dialog>
+		</ng-container>
+
+	</ng-container>
+
+</div>

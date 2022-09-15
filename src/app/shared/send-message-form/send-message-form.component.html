@@ -1,1 +1,63 @@
-<app-comming-soon-page></app-comming-soon-page>
+<div>
+
+	<ng-container *ngIf="messageForm">
+
+		<form class="grid grid-cols-3 gap-4" [formGroup]="messageForm">
+
+			<!-- Name field -->
+			<mat-form-field [appearance]="'outline'">
+				<mat-label>Name</mat-label>
+				<input matInput [formControlName]="'name'" [placeholder]="'Name...'">
+
+				<mat-error *ngIf="messageForm.controls['name'].hasError('required')">
+					Name is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+
+			<!-- Name field -->
+			<mat-form-field [appearance]="'outline'">
+				<mat-label>Phone</mat-label>
+				<input matInput [formControlName]="'phone'" [placeholder]="'Phone...'">
+
+				<mat-error *ngIf="messageForm.controls['phone'].hasError('required')">
+					Phone is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+
+			<!-- Email field -->
+			<mat-form-field [appearance]="'outline'">
+				<mat-label>Email</mat-label>
+				<input type="email" matInput [formControlName]="'email'" [errorStateMatcher]="messageFormMatcher" [placeholder]="'Email...'">
+				<!--<mat-hint>Errors appear instantly!</mat-hint>-->
+
+				<mat-error *ngIf="messageForm.controls['email'].hasError('email') && !messageForm.controls['email'].hasError('required')">
+					Please enter a valid email address
+				</mat-error>
+
+				<mat-error *ngIf="messageForm.controls['email'].hasError('required')">
+					Email is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+
+			<!-- Message field -->
+			<mat-form-field class="col-span-3" [appearance]="'outline'">
+				<mat-label>Message</mat-label>
+				<textarea matInput [formControlName]="'message'" [placeholder]="'Message...'"></textarea>
+
+				<mat-error *ngIf="messageForm.controls['message'].hasError('required')">
+					Message is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+
+			<!-- Send button -->
+			<div>
+				<button mat-raised-button [color]="'primary'" (click)="onSubmitBtnClick()">
+					{{ 'Send it' }}
+					<i class="material-icons">chevron_right</i>
+				</button>
+			</div>
+		</form>
+
+	</ng-container>
+
+</div>

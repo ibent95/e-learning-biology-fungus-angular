@@ -58,8 +58,21 @@
 	</section>
 
 	<!-- Send message form -->
-	<section class="container mx-auto grid grid-cols-auto gap-4 justify-items-center" [id]="'home-send-message-form'">
-		<app-send-message-form></app-send-message-form>
+	<section class="container mx-auto grid grid-cols-auto gap-4" [id]="'home-send-message-form'">
+		<span class="text-2xl font-medium text-center">{{ 'Daftar harga produk' | titlecase }}</span>
+
+		<div class="grid grid-cols-3 gap-4">
+			<div class="col-span-1">
+				<div class="flex flex-row">
+					<i class="material-icons text-7xl md:text-6xl tiny:text-xs">account_circle</i>
+					<span class="basis-1/2 text-2xl mt-5 md:text-lg md:mt-3 xs:text-xs xs:mt-0">Social account</span>
+				</div>
+			</div>
+
+			<div class="col-span-2">
+				<app-send-message-form></app-send-message-form>
+			</div>
+		</div>
 	</section>
 
 </div>
