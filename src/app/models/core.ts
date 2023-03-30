@@ -17,3 +17,10 @@ export interface PriceListResource {
 	price: number;
 	items: Array<PriceListItem>;
 }
+
+export enum DialogModalType {
+	INFO,
+	CONFIRM,
+	WARNING,
+	ALERT
+}

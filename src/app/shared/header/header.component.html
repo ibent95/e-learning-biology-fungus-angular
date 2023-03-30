@@ -4,15 +4,23 @@
 			<mat-icon>menu</mat-icon>
 		</button>-->
 
-		<span>{{ 'Sistem Pencernaan' }}</span>
+		<span>{{ 'E-Learning - Fungi' }}</span>
 		<span class="spacer"></span>
 
 		<button mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Home page">
 			{{ 'Beranda' }}
 		</button>
 
+		<button mat-button routerLink="/materi" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Subjects page">
+			{{ 'Materi' }}
+		</button>
+
+		<button mat-button routerLink="/latihan-soal" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Excercises page">
+			{{ 'Latihan Soal' }}
+		</button>
+
 		<button mat-button routerLink="/tentang" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="About page">
-			{{ 'Tentang' }}
+			{{ 'Glosarium' }}
 		</button>
 
 		<button mat-button routerLink="/kontak" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Contacts page">

@@ -4,12 +4,24 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './modules/about/about.component';
 import { ContactsComponent } from './modules/contacts/contacts.component';
 import { HomeComponent } from './modules/home/home.component';
+import { SubjectsComponent } from './modules/subjects/subjects.component';
+import { ExcercisesComponent } from './modules/excercises/excercises.component';
 import { NotFoundPageComponent } from './shared/not-found-page/not-found-page.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    children: [],
+  },
+  {
+    path: 'materi',
+    component: SubjectsComponent,
+    children: [],
+  },
+  {
+    path: 'latihan-soal',
+    component: ExcercisesComponent,
     children: [],
   },
   {
