@@ -33,6 +33,7 @@ import { ContactsComponent } from './modules/contacts/contacts.component';
 import { AboutComponent } from './modules/about/about.component';
 import { SubjectsComponent } from './modules/subjects/subjects.component';
 import { ExcercisesComponent } from './modules/excercises/excercises.component';
+import { SubjectDetailComponent } from './modules/subjects/subject-detail/subject-detail.component';
 
 registerLocaleData(localeId, 'id');
 
@@ -57,6 +58,7 @@ registerLocaleData(localeId, 'id');
     WarningDialogComponent,
     AlertDialogComponent,
     ExcercisesComponent,
+    SubjectDetailComponent,
   ],
   imports: [
     BrowserModule,
